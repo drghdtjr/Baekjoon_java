@@ -9,9 +9,16 @@ public class One_Dimension3_2577 {
         int b= sc.nextInt();
         int c= sc.nextInt();
         int d=a*b*c;
-        String str_d=Integer.toString(d);
-        for(int i=0;i<10;i++){
+        int []num=new int[10];
 
+        while(d>0){
+            num[d%10]++;
+            d=d/10;
+        }
+
+        for(int i=0;i< num.length;i++)
+        {
+            System.out.println(num[i]);
         }
     }
 }
