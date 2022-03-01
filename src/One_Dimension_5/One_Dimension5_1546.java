@@ -5,24 +5,21 @@ import java.util.Scanner;
 public class One_Dimension5_1546 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        int[] arr=new int[10];
-        boolean bl;
-        int count=0;
-        for(int i=0;i< arr.length;i++){
-            arr[i]= sc.nextInt()%42;
-        }
-        for(int i=0; i< arr.length;i++){
-            bl=false;
-            for(int k=i+1; k< arr.length;k++){
-                if(arr[i]==arr[k]){
-                    bl=true;
-                    break;
-                }
+        int n= sc.nextInt();
+        int []arr=new int[n];
+        int max=0;
+        int sum=0;
+        double avg=0;
+        for(int i=0; i< arr.length; i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]>max){
+                max=arr[i];
             }
-            if(bl==false){
-                count++;
-            }
+            sum+=arr[i];
         }
-        System.out.println(count);
+        avg=100.0*sum/max/n;
+        System.out.println(avg);
+
     }
+
 }
